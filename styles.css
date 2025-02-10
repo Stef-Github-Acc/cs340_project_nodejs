@@ -113,24 +113,41 @@ h2 {
 }
 
 form{
-    border: 1px solid; 
-    padding: 10px 20px; 
+    padding: 20px 0; 
     width: 60%
 }
 
+fieldset{
+    padding: 25px 20px;
+}
+
 input[type=text] {
-    width: 40%;
+    width: 100%;
     padding: 5px;
     margin: 8px 0;
     box-sizing: border-box;
-  }
+}
+input[type=text].inline {
+    width: 40%;
+}
 input[type=number] {
     width: 20%;
     padding: 5px;
     margin: 8px 0;
     box-sizing: border-box;
 }
-
+input[type=date] {
+    width: 30%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=email] {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 input[type=submit] {
     padding: 5px 10px;
     margin: 8px 0;
@@ -144,6 +161,15 @@ input[type=button] {
     border-radius: 8px;
     border: 1px solid; 
 }
+label:has(+ input:required):after {
+    content: ' *';
+    color: red;
+}
+
 label.form {
     padding-left: 10px;
+}
+legend{
+    font-weight: bold;
+    font-size: 14pt;
 }
