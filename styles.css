@@ -85,11 +85,11 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 th {
-    padding: 10px 5px;
-    background-color:steelblue;
+    padding: 5px 5px;
+    background-color:#89B1D1;
 } 
 td {
-    padding: 0 5px; 
+    padding: 5px 5px; 
 }
 
 td.id, td.date, td.edit, td.del {
@@ -104,4 +104,38 @@ h2 {
     font-size: 16pt;
 }
 
+form{
+    border: 1px solid; 
+    padding: 10px 20px; 
+    width: 60%
+}
 
+input[type=text] {
+    width: 40%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+input[type=number] {
+    width: 20%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    padding: 5px 10px;
+    margin: 8px 0;
+    background-color: #A7C4DD;
+    border-radius: 8px;
+    border: 1px solid;
+}
+input[type=button] {
+    padding: 5px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid; 
+}
+label.form {
+    padding-left: 10px;
+}
