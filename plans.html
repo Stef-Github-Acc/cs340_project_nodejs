@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Oregon Streamer</title>
+        <title>The Oregon Streamer - Subscription Plans</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noindex, noarchive, nofollow">
         <meta name="author" content="Mary Kosman & Stefan Milosavljevic">
@@ -17,7 +17,6 @@
         <h1>The Oregon Streamer</h1> 
         </header>
         <ul class="nav">
-            <li><a href ="index.html">Home</a></li>
             <li><a href="subscribers.html">Subscribers</a></li>
             <li><a href="subscriptions.html">Subscriptions</a></li>
             <li><a href="plans.html">Subscription Plans</a></li>
@@ -30,66 +29,92 @@
         <main>
             <hr class="divider">
             <h2>Subscription Plans</h2>
-           <!-- <div><a class="button" href ="SubscriberForm.html">Add Subscriber</a></div> -->
+            <div><a class="button" href ="#add_form">Add Plan</a></div>
             <table class="short">
                 <tr>
                     <th>plan_id</th>
                     <th>plan_name</th>
                     <th>plan_price</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td class="id">1</td>
                     <td>Basic_Monthly</td>
                     <td class="money">9.99</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
                 <tr>
                     <td class="id">2</td>
                     <td>Standard_Monthly</td>
                     <td class="money">19.99</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
                 <tr>
                     <td class="id">3</td>
                     <td>Premium_Monthly</td>
                     <td class="money">29.99</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
                 <tr>
                     <td class="id">4</td>
                     <td>Basic_Annual</td>
                     <td class="money">99.90</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
                 <tr>
                     <td class="id">5</td>
                     <td>Standard_Annual</td>
                     <td class="money">199.90</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
                 <tr>
                     <td class="id">6</td>
                     <td>Premium_Annual</td>
                     <td class="money">299.90</td>
+                    <td class="edit"><a class="button" href ="planForm.html">Edit</a></td>
+                    <td class="del"><a class="button" href ="delete.html">Delete</a></td>
                 </tr>
             </table>
-            <form class="add">
+            <form id="add_form">
                 <fieldset>
                     <legend>Add a Plan</legend>
+                    <div class="row">
                     <label for="add_name">Plan name:</label>
-                    <input class="inline"type="text" id="add_name" name="plan_name" required>
-                    <label class="form" for="add_price">Plan price:</label>
+                    <input type="text" id="add_name" name="plan_name" required>
+                    <label for="add_price">Plan price:</label>
                     <input type="number" id="add_price" name="plan_price" 
-                    min="0.00" max="9999.99" step="0.01" required><br>
+                    min="0.00" max="9999.99" step="0.01" required>
+                    </div>
+                    <div class="button_row">
                     <input type="submit" value="Add Record">
                     <input type="button" value="Cancel">
+                    </div>
                 </fieldset>
             </form>
-            <form class="edit">
+            <form id="edit_form">
                 <fieldset>
                     <legend>Edit a Plan</legend>
+                    <div class="row">
+                    <label for="edit_id">Plan ID:</label>
+                    <input type="number" id="edit_id" name="plan_id" value="1" disabled>
+                    </div>
+                    <div class="row">
                     <label for="edit_name">Plan name:</label>
-                    <input class="inline" type="text" id="edit_name" name="plan_name" required>
-                    <label class="form" for="edit_price">Plan price:</label>
+                    <input type="text" id="edit_name" name="plan_name" value="Basic_Monthly" required>
+                    <label for="edit_price">Plan price:</label>
                     <input type="number" id="edit_price" name="plan_price" 
-                    min="0.00" max="9999.99" step="0.01" required><br>
+                    min="0.00" max="9999.99" step="0.01" value="9.99" required>
+                    </div>
+                    <div class="button_row">
                     <input type="submit" value="Modify Record">
                     <input type="button" value="Cancel">
+                    </div>
                 </fieldset>
             </form>
         </main>
