@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Oregon Streamer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, noarchive, nofollow">
+        <meta name="author" content="Mary Kosman & Stefan Milosavljevic">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+        <!--
+        <script src="main.js"></script>
+        -->
+    </head>
+    <body>
+        <header>
+        <h1>The Oregon Streamer</h1> 
+        </header>
+        <ul class="nav">
+            <li><a href ="index.html">Home</a></li>
+            <li><a href="subscribers.html">Subscribers</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+            <li><a href="plans.html">Subscription Plans</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="languages.html">Languages</a></li>
+            <li><a href="moviegenres.html">Movies by Genre</a></li>
+            <li><a href="subsmovies.html">Watch History</a></li>
+        </ul>
+        <main>
+            <hr class="divider">
+            <!--<h2>Subscription Plans</h2>
+            <div><a class="button" href ="<Movie>Form.html">Add Movie</a></div> -->
+            <form class="add">
+                <fieldset>
+                    <legend>Add a Movie</legend>
+
+                    <label for="add_movie_id">Movie ID:</label>
+                    <input type="text" id="add_movie_id" name="movie_id" required><br>
+
+                    <label for="add_language">Language:</label>
+                    <select id="add_language" name="language_name" required>
+                    <option value="" disabled selected>Language</option>
+                    <!-- To be dynamically generated from DB -->
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+
+                    <label for="add_title">Title:</label>
+                    <input type="text" id="add_title" name="title" required><br>
+
+                    <label for="add_release_year">Release Year:</label>
+                    <input type="number" id="add_release_year" name="release_year" required>
+
+                    <label class="form" for="add_runtime">Runtime</label>
+                    <input type="number" id="add_runtime" name="runtime"><br>
+                    
+                    <input type="submit" value="Add Record">
+                    <input type="button" value="Cancel">
+
+                </fieldset>
+            </form>
+            <form class="edit">
+                <fieldset>
+                    <legend>Modify a Movie</legend>
+
+                    <label for="edit_movie_id">Movie ID:</label>
+                    <input type="text" id="edit_movie_id" name="movie_id" required><br>
+
+                    <label for="add_language">Language:</label>
+                    <select id="add_language" name="language_name" required>
+                    <option value="" disabled selected>Language</option>
+                    <!-- To be dynamically generated from DB -->
+                    <option value="English">English</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="French">French</option>
+
+                    <label for="edit_title">Title:</label>
+                    <input type="text" id="edit_title" name="title" required><br>
+
+                    <label for="edit_release_year">Release Year:</label>
+                    <input type="number" id="edit_release_year" name="release_year" required>
+
+                    <label class="form" for="edit_runtime">Runtime</label>
+                    <input type="number" id="edit_runtime" name="runtime"><br>
+
+                    <input type="submit" value="Modify Record">
+                    <input type="button" value="Cancel">
+                </fieldset>
+            </form>
+        </main>
+        <footer><p>&copy; 2025 Mary Kosman &amp Stefan Milosavljevic</p></footer>
+    </body>
+</html>
