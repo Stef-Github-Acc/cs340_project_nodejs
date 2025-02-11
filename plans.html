@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Oregon Streamer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, noarchive, nofollow">
+        <meta name="author" content="Mary Kosman & Stefan Milosavljevic">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+        <!--
+        <script src="main.js"></script>
+        -->
+    </head>
+    <body>
+        <header>
+        <h1>The Oregon Streamer</h1> 
+        </header>
+        <ul class="nav">
+            <li><a href ="index.html">Home</a></li>
+            <li><a href="subscribers.html">Subscribers</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+            <li><a href="plans.html">Subscription Plans</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="languages.html">Languages</a></li>
+            <li><a href="moviegenres.html">Movies by Genre</a></li>
+            <li><a href="subsmovies.html">Watch History</a></li>
+        </ul>
+        <main>
+            <hr class="divider">
+            <h2>Subscription Plans</h2>
+           <!-- <div><a class="button" href ="SubscriberForm.html">Add Subscriber</a></div> -->
+            <table class="short">
+                <tr>
+                    <th>plan_id</th>
+                    <th>plan_name</th>
+                    <th>plan_price</th>
+                </tr>
+                <tr>
+                    <td class="id">1</td>
+                    <td>Basic_Monthly</td>
+                    <td class="money">9.99</td>
+                </tr>
+                <tr>
+                    <td class="id">2</td>
+                    <td>Standard_Monthly</td>
+                    <td class="money">19.99</td>
+                </tr>
+                <tr>
+                    <td class="id">3</td>
+                    <td>Premium_Monthly</td>
+                    <td class="money">29.99</td>
+                </tr>
+                <tr>
+                    <td class="id">4</td>
+                    <td>Basic_Annual</td>
+                    <td class="money">99.90</td>
+                </tr>
+                <tr>
+                    <td class="id">5</td>
+                    <td>Standard_Annual</td>
+                    <td class="money">199.90</td>
+                </tr>
+                <tr>
+                    <td class="id">6</td>
+                    <td>Premium_Annual</td>
+                    <td class="money">299.90</td>
+                </tr>
+            </table>
+            <form class="add">
+                <fieldset>
+                    <legend>Add a Plan</legend>
+                    <label for="add_name">Plan name:</label>
+                    <input class="inline"type="text" id="add_name" name="plan_name" required>
+                    <label class="form" for="add_price">Plan price:</label>
+                    <input type="number" id="add_price" name="plan_price" 
+                    min="0.00" max="9999.99" step="0.01" required><br>
+                    <input type="submit" value="Add Record">
+                    <input type="button" value="Cancel">
+                </fieldset>
+            </form>
+            <form class="edit">
+                <fieldset>
+                    <legend>Edit a Plan</legend>
+                    <label for="edit_name">Plan name:</label>
+                    <input class="inline" type="text" id="edit_name" name="plan_name" required>
+                    <label class="form" for="edit_price">Plan price:</label>
+                    <input type="number" id="edit_price" name="plan_price" 
+                    min="0.00" max="9999.99" step="0.01" required><br>
+                    <input type="submit" value="Modify Record">
+                    <input type="button" value="Cancel">
+                </fieldset>
+            </form>
+        </main>
+        <footer><p>&copy; 2025 Mary Kosman &amp Stefan Milosavljevic</p></footer>
+    </body>
+</html>

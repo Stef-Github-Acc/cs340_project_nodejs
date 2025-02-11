@@ -1,0 +1,175 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  
+/*   ----- Variables  -----  */
+:root {}
+
+body {
+    margin: 0 40px; 
+    hr.divider {
+        margin: 5px 0;
+        border-top: 2px solid;
+      }
+}
+
+header {
+    margin: 0; 
+    padding: 5px; 
+    height: auto; 
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 25px; 
+    display: flex; 
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav li::after {
+    position: absolute;
+    width: 2px;
+    right: 0; 
+    content: " "; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.nav li:last-child::after {
+    width: 0; 
+}
+
+footer {
+    margin: 0; 
+    padding: 5%; 
+    align-items: center;
+    vertical-align: middle;
+    font-size: 12pt;
+}
+
+a.button {
+    margin: 4px 2px; 
+    padding: 4px 8px; 
+    display: inline-block;
+    border: 1px solid; 
+    border-color: gray;
+    background-color:lightgray; 
+    border-radius: 8px;
+    text-align: center;
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table.short{
+    width: 60%;
+}
+
+table, th, td {
+    border: 1px solid; 
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+th {
+    padding: 5px 5px;
+    background-color:#89B1D1;
+} 
+td {
+    padding: 5px 5px; 
+}
+
+td.id, td.date, td.edit, td.del {
+    text-align: center;
+}
+
+td.money{
+    text-align: right;
+}
+
+div {
+    margin-bottom: 20px;
+}
+h2 {
+    padding: 0 2px; 
+    font-size: 16pt;
+}
+
+form{
+    padding: 20px 0; 
+    width: 60%
+}
+
+fieldset{
+    padding: 25px 20px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=text].inline {
+    width: 40%;
+}
+input[type=number] {
+    width: 20%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=date] {
+    width: 30%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=email] {
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    padding: 5px 10px;
+    margin: 8px 0;
+    background-color: #A7C4DD;
+    border-radius: 8px;
+    border: 1px solid;
+}
+input[type=button] {
+    padding: 5px 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid; 
+}
+label:has(+ input:required):after {
+    content: ' *';
+    color: red;
+}
+
+label.form {
+    padding-left: 10px;
+}
+legend{
+    font-weight: bold;
+    font-size: 14pt;
+}
