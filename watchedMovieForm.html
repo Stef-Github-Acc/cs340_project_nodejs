@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Oregon Streamer - Add/Edit Watch History</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, noarchive, nofollow">
+        <meta name="author" content="Mary Kosman & Stefan Milosavljevic">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+        <!--
+        <script src="main.js"></script>
+        -->
+    </head>
+    <body>
+        <header>
+        <h1>The Oregon Streamer</h1> 
+        </header>
+        <ul class="nav">
+            <li><a href="subscribers.html">Subscribers</a></li>
+            <li><a href="subscriptions.html">Subscriptions</a></li>
+            <li><a href="plans.html">Subscription Plans</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="languages.html">Languages</a></li>
+            <li><a href="moviegenres.html">Movies by Genre</a></li>
+            <li><a href="subsmovies.html">Watch History</a></li>
+        </ul>
+        <main>
+            <hr class="divider">
+            <form class="add">
+                <fieldset>
+                    <legend>Add a Movie &amp; Subscriber</legend>
+                    <div class="row">
+                    <label for="add_title">Movie Title:</label>
+                    <select class="title" id="add_title" name="title" required>
+                        <option value="" disabled selected></option>
+                        <!-- To be dynamically generated from DB -->
+                        <option value="Avatars">Avatars</option>
+                        <option value="Avengers: Startgame">Avengers: Startgame</option>
+                        <option value="Titanically">Titanically</option>
+                    </select>
+                    </div>
+                    <div class="row">
+                    <label for="add_subscriber">Subscriber Name: </label>
+                    <select class="name" id="add_subscriber" name="name" required>
+                        <option value="" disabled selected></option>
+                        <!-- To be dynamically generated from DB -->
+                        <option value="John Smith">John Smith</option>
+                        <option value="Emily Johnson">Emily Johnson</option>
+                        <option value="Michael Brown">Michael Brown</option>
+                    </select>
+                    </div>
+                    <div class="row">
+                    <label for="add_rating">Rating: </label>
+                    <input type="number" id="add_rating" name="rating" min="1" max="10" step="1">
+                    </div>
+                    <div class="button_row">
+                    <input type="submit" value="Add Record">
+                    <input type="button" value="Cancel">
+                    </div>
+                </fieldset>
+            </form>
+            <form class="edit">
+                <fieldset>
+                    <legend>Edit a Movie &amp; Subscriber</legend>
+                    <div class="row">
+                    <label for="edit_id">Watch ID:</label>
+                    <input type="number" id="edit_id" name="watch_id" value="1" disabled>
+                    </div>
+                    <div class="row">
+                    <label for="edit_title">Movie Title:</label>
+                    <input type="text" id="edit_title" name="title" value="Avatar" required>
+                    </div>
+                    <div class="row">
+                    <label for="edit_subscriber">Subscriber Name:</label>
+                    <input type="text" id="edit_subscriber" name="name" value="John Smith" required>
+                    </div>
+                    <div class="row">
+                    <label for="edit_rating">Rating: </label>
+                    <input type="number" id="edit_rating" name="rating" min="1" max="10" step="1" value="9">
+                    </div>
+                    <div class="button_row">
+                    <input type="submit" value="Add Record">
+                    <input type="button" value="Cancel">
+                    </div>
+                </fieldset>
+            </form>
+            <form class="add">
+                <fieldset>
+                    <legend>Delete Rating</legend>
+                    <div class="row">
+                    <label for="del_title">Movie Title:</label>
+                    <select class="title" id="del_title" name="title" required>
+                        <option value="" disabled selected></option>
+                        <!-- To be dynamically generated from DB -->
+                        <option value="Avatars">Avatars</option>
+                        <option value="Avengers: Startgame">Avengers: Startgame</option>
+                        <option value="Titanically">Titanically</option>
+                    </select>
+                    </div>
+                    <div class="row">
+                    <label for="del_subscriber">Subscriber Name: </label>
+                    <select class="name" id="del_subscriber" name="name" required>
+                        <option value="" disabled selected></option>
+                        <!-- To be dynamically generated from DB -->
+                        <option value="John Smith">John Smith</option>
+                        <option value="Emily Johnson">Emily Johnson</option>
+                        <option value="Michael Brown">Michael Brown</option>
+                    </select>
+                    </div>
+                    <div class="button_row">
+                    <input type="submit" value="Delete Rating">
+                    <input type="button" value="Cancel">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+        <footer><p>&copy; 2025 Mary Kosman &amp Stefan Milosavljevic</p></footer>
+    </body>
+</html>

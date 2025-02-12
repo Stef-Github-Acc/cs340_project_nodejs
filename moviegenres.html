@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Oregon Streamer - Movies_Genres</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, noarchive, nofollow">
+        <meta name="author" content="Mary Kosman & Stefan Milosavljevic">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+        <!--
+        <script src="main.js"></script>
+        -->
+    </head>
+    <body>
+        <header>
+        <h1>The Oregon Streamer</h1> 
+    </header>
+    <ul class="nav">
+        <li><a href="subscribers.html">Subscribers</a></li>
+        <li><a href="subscriptions.html">Subscriptions</a></li>
+        <li><a href="plans.html">Subscription Plans</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="genres.html">Genres</a></li>
+        <li><a href="languages.html">Languages</a></li>
+        <li><a href="moviegenres.html">Movies by Genre</a></li>
+        <li><a href="subsmovies.html">Watch History</a></li>
+    </ul>
+    <main>
+        <hr class="divider">
+        <h2>Movies_Genres</h2>
+        <div><a class="button" href ="#add_record">Add Record</a></div>
+        <!--To be populated by select query-->
+        <table class="short">
+            <tr>
+                <th>movie_genre_id</th>
+                <th>movie_title</th>
+                <th>genre</th>
+            </tr>
+            <tr>
+                <td class="id">1</td>
+                <td>Avatars</td>
+                <td>Action</td>
+            </tr>
+            <tr>
+                <td class="id">2</td>
+                <td>Avatars</td>
+                <td>Adventure</td>
+            </tr>
+            <tr>
+                <td class="id">3</td>
+                <td>Avengers: Startgame</td>
+                <td>Action</td>
+            </tr>
+        </table>
+        <form id="add_record" action="PATH" method="POST">
+            <fieldset>
+                <legend>Add a Movie &amp; Genre</legend>
+                <label for="add_title">Movie Title:</label>
+                <select class="title" id="add_title" name="title" required>
+                    <option value="" disabled selected></option>
+                    <!-- To be dynamically generated from DB -->
+                    <option value="Avatars">Avatars</option>
+                    <option value="Avengers: Startgame">Avengers: Startgame</option>
+                    <option value="Titanically">Titanically</option>
+                </select>
+                <label for="add_genre">Genre:</label>
+                <select id="add_genre" name="genre_type" required>
+                    <option value="" disabled selected></option>
+                    <!-- To be dynamically generated from DB -->
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Drama">Drama</option>
+                </select><br>
+                <input type="submit" value="Add Record">
+                <input type="button" value="Cancel" onclick="">
+            </fieldset>
+        </form>
+    </main>
+<footer><p>&copy; 2025 Mary Kosman &amp Stefan Milosavljevic</p></footer>
+</body>
+</html>
