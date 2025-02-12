@@ -25,27 +25,47 @@
     </ul>
     <main>
         <hr class="divider">
-        <h2>Genres</h2>
-        <div><a class="button" href="genreForm.html">Add Genre</a></div>
+        <h2>Languages</h2>
         <table>
             <tr>
-                <th>Genre_ID</th>
-                <th>Genre</th>
+                <th>Languages_ID</th>
+                <th>Languages</th>
             </tr>
             <tr>
                 <td class="id">1</td>
-                <td>Action</td>
+                <td>English</td>
             </tr>
             <tr>
                 <td class="id">2</td>
-                <td>Comedy</td>
+                <td>Spanish</td>
             </tr>
             <tr>
                 <td class="id">3</td>
-                <td>Drama</td>
+                <td>French</td>
             </tr>
             <!-- To be dynamically added from DB -->
         </table>
+
+        <hr class="divider">
+        <form class="add">
+            <fieldset>
+                <legend>Add a Language</legend>
+
+                <div class="row">
+                    <label for="add_language">Language:</label>
+                    <select id="add_language" name="Language" required>
+                        <option value="" disabled selected></option>
+                        <!-- To be dynamically generated from DB -->
+                        <option value="English">English</option>
+                        <option value="French">French</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                    </div>
+                
+                <input type="submit" value="Add Record">
+                <input type="button" value="Cancel">
+            </fieldset>
+        </form>
     </main>
     <footer><p>&copy; 2025 Mary Kosman &amp; Stefan Milosavljevic</p></footer>
 </body>
