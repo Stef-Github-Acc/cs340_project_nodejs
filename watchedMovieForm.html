@@ -88,7 +88,7 @@
             </form>
             <form class="add">
                 <fieldset>
-                    <legend>Delete Rating</legend>
+                    <legend>Set a Movie to Null</legend>
                     <div class="row">
                     <label for="del_title">Movie Title:</label>
                     <select class="title" id="del_title" name="title" required>
@@ -99,18 +99,8 @@
                         <option value="Titanically">Titanically</option>
                     </select>
                     </div>
-                    <div class="row">
-                    <label for="del_subscriber">Subscriber Name: </label>
-                    <select class="name" id="del_subscriber" name="name" required>
-                        <option value="" disabled selected></option>
-                        <!-- To be dynamically generated from DB -->
-                        <option value="John Smith">John Smith</option>
-                        <option value="Emily Johnson">Emily Johnson</option>
-                        <option value="Michael Brown">Michael Brown</option>
-                    </select>
-                    </div>
                     <div class="button_row">
-                    <input type="submit" value="Delete Rating">
+                    <input type="submit" value="Set to Null">
                     <input type="button" value="Cancel">
                     </div>
                 </fieldset>
